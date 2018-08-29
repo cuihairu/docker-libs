@@ -7,8 +7,6 @@ ENV PATH /usr/local/bin:$PATH
 # > At the moment, setting "LANG=C" on a Linux system *fundamentally breaks Python 3*, and that's not OK.
 ENV LANG C.UTF-8
 
-
-# extra dependencies (over what buildpack-deps already includes)
 RUN yum install -y  \
         tk-devel \
         uuid-devel \
