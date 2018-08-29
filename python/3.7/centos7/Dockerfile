@@ -1,4 +1,4 @@
-FROM centos7.5.1804
+FROM cuihairu/centos:7
 
 # ensure local python is preferred over distribution python
 ENV PATH /usr/local/bin:$PATH
@@ -7,14 +7,13 @@ ENV PATH /usr/local/bin:$PATH
 # > At the moment, setting "LANG=C" on a Linux system *fundamentally breaks Python 3*, and that's not OK.
 ENV LANG C.UTF-8
 
-# use aliyun base repo 
-ADD http://mirrors.aliyun.com/repo/Centos-7.repo /etc/yum.repos.d/CentOS-Base.repo
 
 # extra dependencies (over what buildpack-deps already includes)
-RUN yum update -y  \
-        tk-dev \
-        uuid-dev \
-    && rm -rf /var/lib/apt/lists/*
+RUN yum install -y  \
+        tk-devel \
+        uuid-devel \
+        wget \
+    && yum clean all 
 
 ENV GPG_KEY 0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D
 ENV PYTHON_VERSION 3.7.0
