@@ -13,17 +13,22 @@
 ### tags
 
 - cuihairu/centos:latest, cuihairu/centos:7
- [(docker/Dockerfile)](https://github.com/cuihairu/docker-libs/blob/master/centos/7/Dockerfile)
+[(docker/Dockerfile)](https://github.com/cuihairu/docker-libs/blob/master/centos/7/Dockerfile)
 >指向最新版本目前为7,使用了网易源以及epel
 
 - cuihairu/centos:7-gcc
- [docker/Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/centos/7/gcc/Dockerfile)
+[docker/Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/centos/7/gcc/Dockerfile)
 >安装了默认版本的GCC套件
 
-
+- cuihairu/centos:7-devtoolset
+[docker/Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/centos/7/dev/Dockerfile)
+  1. devtoolset-3 => GCC4.9 
+  2. devtoolset-4 => GCC5.3 
+  3. devtoolset-6 => GCC6.2 
+  > source /opt/rh/devtoolset-${version}/enable 
 
 ### update
-
+- 2018-8-31 增加7-devtoolset 
 - 2018-8-31 增加7-gcc标签
 - 2018-8-31 从阿里源更新到了网易源。
 - 2018-8-26 使用阿里源
