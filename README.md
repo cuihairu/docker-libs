@@ -25,8 +25,11 @@
   1. devtoolset-3 => GCC4.9 
   2. devtoolset-4 => GCC5.3 
   3. devtoolset-6 => GCC6.2 
-  > source /opt/rh/devtoolset-${version}/enable 
+切换版本:
 
+``` bash
+source /opt/rh/devtoolset-version/enable 
+```
 ### update
 - 2018-8-31 增加7-devtoolset 
 - 2018-8-31 增加7-gcc标签
