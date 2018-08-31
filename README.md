@@ -4,9 +4,9 @@
 
 > 主要修改了一些源方便国内使用
 
-# centos
+## centos
 
-## tags & Dockerfile
+### tags & Dockerfile
 
 - [cuihairu/centos:latest](https://github.com/cuihairu/docker-libs/blob/master/centos/7/Dockerfile)
 >指向最新版本目前为7
@@ -17,7 +17,7 @@
 - [cuihairu/centos:7-gcc](https://github.com/cuihairu/docker-libs/blob/master/centos/7/gcc/Dockerfile)
 >安装了默认版本的GCC套件
 
-## update
+### update
 
 - 2018-8-31 增加7-gcc标签
 - 2018-8-31 从阿里源更新到了网易源。
@@ -25,10 +25,10 @@
 
 ---
 
-# ubuntu
+## ubuntu
 
 
-## tags & Dockerfile
+### tags & Dockerfile
 
 - [cuihairu/ubuntu:latest](https://github.com/cuihairu/docker-libs/blob/master/ubuntu/18/Dockerfile)
 >指向了ubuntu:18.04 
@@ -39,14 +39,14 @@
 
 
 
-## update 
+### update 
 
 - 2018-8-31 修改源为阿里源
 
 ---
 
-# python
+## python
 
-## tags & Dockerfile
+### tags & Dockerfile
 
-## update
+### update
