@@ -1,0 +1,9 @@
+FROM ubuntu:18.04
+
+COPY sources.list /etc/apt/
+
+RUN apt-get update \
+    && apt-get  build-dep  gcc -y \
+    && rm -rf /var/lib/apt/lists/*
+
+ONBUILD apt-get update
