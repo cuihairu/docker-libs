@@ -2,4 +2,4 @@ FROM ubuntu:18.04
 
 COPY sources.list /etc/apt/
 
-ONBUILD apt-get update
+ONBUILD RUN apt-get update

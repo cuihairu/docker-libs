@@ -9,6 +9,6 @@ RUN rpm -Uvh http://mirrors.ustc.edu.cn/epel/epel-release-latest-7.noarch.rpm \
     && echo "nameserver 114.114.114.114" >> /etc/resolv.conf
 
 
-ONBUILD yum makecache 
+ONBUILD RUN yum makecache 
 
 

@@ -18,7 +18,7 @@
 
 - cuihairu/centos:7-gcc
 [docker/Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/centos/7/gcc/Dockerfile)
->安装了默认版本的GCC套件
+>安装了默认版本的GCC套件gcc4.8.5
 
 - cuihairu/centos:7-devtoolset
 [docker/Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/centos/7/dev/Dockerfile)
@@ -40,8 +40,8 @@ source /opt/rh/devtoolset-version/enable
 
 ## ubuntu
 
-[docker/centos](https://hub.docker.com/_/ubuntu/)
-[cuihairu/centos](https://hub.docker.com/r/cuihairu/ubuntu/)
+[docker/ubuntu](https://hub.docker.com/_/ubuntu/)
+[cuihairu/ubuntu](https://hub.docker.com/r/cuihairu/ubuntu/)
 
 ### tags
 
@@ -62,6 +62,10 @@ source /opt/rh/devtoolset-version/enable
 
 ## python
 
+[docker/python](https://hub.docker.com/_/python/)
+[cuihairu/python](https://hub.docker.com/r/cuihairu/ubuntu/)
+
 ### tags
+
 
 ### update

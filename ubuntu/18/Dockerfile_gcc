@@ -6,4 +6,4 @@ RUN apt-get update \
     && apt-get  build-dep  gcc -y \
     && rm -rf /var/lib/apt/lists/*
 
-ONBUILD apt-get update
+ONBUILD RUN apt-get update
