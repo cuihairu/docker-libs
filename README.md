@@ -5,6 +5,8 @@
 
 [issues](https://github.com/cuihairu/docker-libs/issues)
 
+---
+
 ## centos
 
 [docker/centos](https://hub.docker.com/_/centos/)
@@ -79,3 +81,5 @@ source /opt/rh/devtoolset-version/enable
 [Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/python/3.7/centos7/Dockerfile)
 
 ### update
+- 2018-8-31 基于centos7系统安装python3.7.0
+---
