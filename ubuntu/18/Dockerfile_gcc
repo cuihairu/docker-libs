@@ -12,5 +12,3 @@ VOLUME /data
 WORKDIR /data
 
 ONBUILD RUN apt-get update
-
-CMD["gcc","--version"]
