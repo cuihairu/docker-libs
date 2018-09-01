@@ -3,7 +3,11 @@ FROM ubuntu:18.04
 COPY sources.list /etc/apt/
 
 RUN apt-get update \
-    && apt-get  build-dep  gcc -y \
+    && apt-get build-dep gcc -y \
+    && mkdir -p /data \
     && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /data
+VOLUME /data
 
 ONBUILD RUN apt-get update

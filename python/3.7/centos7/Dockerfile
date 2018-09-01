@@ -15,7 +15,7 @@ RUN yum update -y \
         wget \
         epel-release \
         dpkg-devel \
-         dpkg-dev \
+        dpkg-dev \
     && yum clean all \
     && rm -rf /var/cache/yum/*
 
