@@ -1,16 +1,21 @@
-FROM cuihairu/centos:7
+FROM cuihairu/centos:7-gcc
 
 # ensure local python is preferred over distribution python
 ENV PATH /usr/local/bin:$PATH
 
 # http://bugs.python.org/issue19846
 # > At the moment, setting "LANG=C" on a Linux system *fundamentally breaks Python 3*, and that's not OK.
-ENV LANG C.UTF-8
+ENV LANG en_US.UTF-8
 
-RUN yum install -y  \
+RUN yum update -y \
+    && yum install -y  \
+        deltarpm \
         tk-devel \
         uuid-devel \
         wget \
+        epel-release \
+        dpkg-devel \
+         dpkg-dev \
     && yum clean all \
     && rm -rf /var/cache/yum/*
 
