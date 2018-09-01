@@ -7,17 +7,23 @@ ENV PATH /usr/local/bin:$PATH
 # > At the moment, setting "LANG=C" on a Linux system *fundamentally breaks Python 3*, and that's not OK.
 ENV LANG en_US.UTF-8
 
-RUN yum update -y \
-    && yum install -y  \
+RUN  yum install -y  \
         deltarpm \
         tk-devel \
         uuid-devel \
         wget \
-        epel-release \
-        dpkg-devel \
-        dpkg-dev \
-    && yum clean all \
-    && rm -rf /var/cache/yum/*
+        openssl-devel \
+        ncurses-devel \
+        sqlite-devel \
+        zlib-devel \
+        zlib-static \
+        zlib \
+        readline-devel \
+        xz-devel \
+        gdbm-devel \
+        bzip2-devel \
+        libffi-devel \
+        libssl-devel
 
 ENV GPG_KEY 0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D
 ENV PYTHON_VERSION 3.7.0
@@ -36,16 +42,16 @@ RUN set -ex \
     && rm python.tar.xz \
     \
     && cd /usr/src/python \
-    && gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)" \
     && ./configure \
-        --build="$gnuArch" \
         --enable-loadable-sqlite-extensions \
         --enable-shared \
         --with-system-expat \
         --with-system-ffi \
         --without-ensurepip \
-    && make -j "$(nproc)" \
+        --enable-optimizations \
+    && make -j `cat /proc/cpuinfo |grep "processor"|wc -l` \
     && make install \
+    && echo "/usr/local/lib/" >>/etc/ld.so.conf \
     && ldconfig \
     \
     && find /usr/local -depth \
@@ -57,6 +63,7 @@ RUN set -ex \
     && rm -rf /usr/src/python \
     \
     && python3 --version
+
 
 # make some useful symlinks that are expected to exist
 RUN cd /usr/local/bin \
@@ -85,6 +92,17 @@ RUN set -ex; \
             -o \
             \( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) \
         \) -exec rm -rf '{}' +; \
-    rm -f get-pip.py
+    rm -f get-pip.py \
+    && mkdir ~/.pip/ \
+    && touch ~/.pip/pip.conf \
+    && echo "[global]" >> ~/.pip/pip.conf \
+    && echo "timeout = 6000" >> ~/.pip/pip.conf \
+    && echo "index-url = http://mirrors.aliyun.com/pypi/simple/" >> ~/.pip/pip.conf \
+    && echo "[install]" >> ~/.pip/pip.conf \ 
+    && echo "use-mirrors = true" >> ~/.pip/pip.conf \
+    && echo "mirrors = http://mirrors.aliyun.com/pypi/simple/" >> ~/.pip/pip.conf \
+    && echo "trusted-host = mirrors.aliyun.com" >> ~/.pip/pip.conf \
+    && yum clean all \
+    && rm -rf /var/cache/yum/*
 
 CMD ["python3"]

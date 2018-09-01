@@ -8,8 +8,13 @@ RUN yum update -y \
     && yum group install -y "Development Tools" \
     && yum clean all \
     && rm -rf /var/cache/yum/* \
+    && mkdir -p /data \
     && echo "nameserver 223.5.5.5" >> /etc/resolv.conf \
     && echo "nameserver 223.6.6.6" >> /etc/resolv.conf \
     && echo "nameserver 114.114.114.114" >> /etc/resolv.conf
+
+VOLUME /data
+
+WORKDIR /data
 
 ONBUILD RUN yum makecache 

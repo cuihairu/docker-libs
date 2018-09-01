@@ -13,18 +13,24 @@
 ### tags
 
 - cuihairu/centos:latest, cuihairu/centos:7
-[(docker/Dockerfile)](https://github.com/cuihairu/docker-libs/blob/master/centos/7/Dockerfile)
+[Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/centos/7/Dockerfile)
 >指向最新版本目前为7,使用了网易源以及epel
 
 - cuihairu/centos:7-gcc
-[docker/Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/centos/7/gcc/Dockerfile)
+[Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/centos/7/gcc/Dockerfile)
 >安装了默认版本的GCC套件gcc4.8.5
+提供了Volume:/data
+默认目录/data
 
 - cuihairu/centos:7-devtoolset
-[docker/Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/centos/7/dev/Dockerfile)
-  1. devtoolset-3 => GCC4.9 
-  2. devtoolset-4 => GCC5.3 
-  3. devtoolset-6 => GCC6.2 
+[Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/centos/7/dev/Dockerfile)
+1. devtoolset-3 => GCC4.9 
+2. devtoolset-4 => GCC5.3 
+3. devtoolset-6 => GCC6.2 
+
+提供了Volume:/data
+默认目录:/data
+
 切换版本:
 
 ``` bash
@@ -46,12 +52,15 @@ source /opt/rh/devtoolset-version/enable
 ### tags
 
 - cuihairu/ubuntu:latest,cuihairu/ubuntu:18.04
-[docker/Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/ubuntu/18/Dockerfile)
+[Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/ubuntu/18/Dockerfile)
 >指向了ubuntu:18.04 
+默认目录:/data
 
 - cuihairu/ubuntu:18.04-gcc
-[docker/Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/ubuntu/18/Dockerfile)
->指向了ubuntu:18.04,安装了默认的gcc7.3 
+[Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/ubuntu/18/Dockerfile)
+>指向了ubuntu:18.04,安装了默认的gcc7.3
+提供了Volume:/data 
+默认目录:/data
 
 
 ### update 
@@ -66,6 +75,7 @@ source /opt/rh/devtoolset-version/enable
 [cuihairu/python](https://hub.docker.com/r/cuihairu/ubuntu/)
 
 ### tags
-
+- cuihairu/python:latest , cuihairu/python:3.7-centos7 
+[Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/python/3.7/centos7/Dockerfile)
 
 ### update
