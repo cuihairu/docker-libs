@@ -83,3 +83,14 @@ source /opt/rh/devtoolset-version/enable
 ### update
 - 2018-8-31 基于centos7系统安装python3.7.0
 ---
+### lua
+[cuihairu/lua](https://hub.docker.com/r/cuihairu/lua/)
+
+### tags
+- cuihairu/lua:5.3.5-centos ,cuihairu/lua:latest
+[Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/lua/5.3.5/Dockerfile)
+
+### update
+- 2018-9-4 基于centos7安装lua
+
+---
