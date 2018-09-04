@@ -2,9 +2,9 @@ FROM cuihairu/centos:7-gcc
 
 MAINTAINER cuihairu <chuihairu@gmail.com>
 
-ENV LUA_VERSION 5.3.5
+ENV LUA_VERSION 2.1.0-beta3
 
-ADD lua-${LUA_VERSION}.tar.gz /data/
+ADD LuaJIT-${LUA_VERSION}.tar.gz /data/
 
 RUN yum install -y \
     make \
@@ -13,10 +13,10 @@ RUN yum install -y \
     openssl-devel \
     readline-devel \
     && yum clean all \
-    && cd /data/lua-${LUA_VERSION} \
-    && make linux test\
+    && cd /data/LuaJIT-${LUA_VERSION} \
+    && make \
     && make install  \
     && cd /data/ \
-    && rm -rf /data/lua-${LUA_VERSION} 
+    && rm -rf /data/LuaJIT-${LUA_VERSION} 
 
 CMD ["lua","-i"]

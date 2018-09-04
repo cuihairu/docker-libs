@@ -90,7 +90,11 @@ source /opt/rh/devtoolset-version/enable
 - cuihairu/lua:5.3.5-centos ,cuihairu/lua:latest
 [Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/lua/5.3.5/Dockerfile)
 
+- cuihairu/lua:luajit-2.1.0.beta3 
+[Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/lua/luajit_2.1.0_beta3/Dockerfile)
+
 ### update
+- 2018-9-4 增加luajit_2.1.0_beta3 lua版本5.1.4
 - 2018-9-4 基于centos7安装lua|修改从本地安装lua不从网络下载不稳定。
 
 ---
