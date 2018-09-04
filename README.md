@@ -91,6 +91,6 @@ source /opt/rh/devtoolset-version/enable
 [Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/lua/5.3.5/Dockerfile)
 
 ### update
-- 2018-9-4 基于centos7安装lua
+- 2018-9-4 基于centos7安装lua|修改从本地安装lua不从网络下载不稳定。
 
 ---

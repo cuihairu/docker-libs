@@ -4,21 +4,20 @@ MAINTAINER cuihairu <chuihairu@gmail.com>
 
 ENV LUA_VERSION 5.3.5
 
+ADD lua-${LUA_VERSION}.tar.gz /data/
+
 RUN yum install -y \
     make \
-    tar \
-    unzip \
     gcc \
     gcc-devel \
     openssl-devel \
     readline-devel \
     && yum clean all \
-    && curl -R -O http://www.lua.org/ftp/lua-${LUA_VERSION}.tar.gz \
-    && tar zxf lua-${LUA_VERSION}.gz \
-    && cd ./lua-${LUA_VERSION} \
+    && ls -alF \
+    && cd /data/lua-${LUA_VERSION} \
     && make linux test  \
     && make install  \
-    && cd .. \
-    && rm -rf ./lua-${LUA_VERSION} 
+    && cd /data/ \
+    && rm -rf /data/lua-${LUA_VERSION} 
 
 CMD ["lua","-i"]
