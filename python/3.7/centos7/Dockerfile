@@ -1,5 +1,7 @@
 FROM cuihairu/centos:7-gcc
 
+MAINTAINER cuihairu <chuihairu@gmail.com>
+
 # ensure local python is preferred over distribution python
 ENV PATH /usr/local/bin:$PATH
 

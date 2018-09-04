@@ -15,7 +15,7 @@ RUN yum install -y \
     && yum clean all \
     && ls -alF \
     && cd /data/lua-${LUA_VERSION} \
-    && make linux test  \
+    && make linux test\
     && make install  \
     && cd /data/ \
     && rm -rf /data/lua-${LUA_VERSION} 
