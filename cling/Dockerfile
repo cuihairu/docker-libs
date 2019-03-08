@@ -17,7 +17,8 @@ RUN yum install -y \
     log4cxx-devel \
     python3 \
     git \
-    wegt 
+    wegt \
+    which
 
 RUN cd /root && source ./cling_build.sh 
 
