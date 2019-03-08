@@ -8,7 +8,7 @@ ENV CLING_DIR="/opt/cling" \
 ADD ./cling_build.sh /root/cling_build.sh 
 
 RUN yum install -y \
-    make3 \
+    cmake3 \
     gcc \
     gcc-devel \
     boost \
