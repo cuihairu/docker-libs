@@ -41,7 +41,6 @@ function cleanup() {
 }
 
 initialize
-get_dependencies
 get_sources
 configure_build
 build_all
