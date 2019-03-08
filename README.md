@@ -1,4 +1,4 @@
-# docker-library
+# Docker-Library
 
 >存放自己编译的Dockerfile文件,关联自己的命名空间cuihairu。
 主要修改了一些源方便国内使用，以及集成一些常用的测试环境。
@@ -7,12 +7,12 @@
 
 ---
 
-## centos
+## Centos
 
 [docker/centos](https://hub.docker.com/_/centos/)
 [cuihairu/centos](https://hub.docker.com/r/cuihairu/centos/)
 
-### tags
+### Tags
 
 - cuihairu/centos:latest, cuihairu/centos:7
 [Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/centos/7/Dockerfile)
@@ -38,7 +38,7 @@
 ``` bash
 source /opt/rh/devtoolset-version/enable 
 ```
-### update
+### Update
 - 2018-8-31 增加7-devtoolset 
 - 2018-8-31 增加7-gcc标签
 - 2018-8-31 从阿里源更新到了网易源。
@@ -46,12 +46,12 @@ source /opt/rh/devtoolset-version/enable
 
 ---
 
-## ubuntu
+## Ubuntu
 
 [docker/ubuntu](https://hub.docker.com/_/ubuntu/)
 [cuihairu/ubuntu](https://hub.docker.com/r/cuihairu/ubuntu/)
 
-### tags
+### Tags
 
 - cuihairu/ubuntu:latest,cuihairu/ubuntu:18.04
 [Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/ubuntu/18/Dockerfile)
@@ -65,25 +65,39 @@ source /opt/rh/devtoolset-version/enable
 默认目录:/data
 
 
-### update 
+### Update 
 
 - 2018-8-31 修改源为阿里源
 
 ---
 
-## python
+## Cling
+
+[cuihairu/cling](https://hub.docker.com/r/cuihairu/cling/)
+
+### Tags
+
+- cuihairu/cling:latest
+[Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/cling/Dockerfile)
+>基于centos7
+默认目录:/data
+
+
+## Python
 
 [docker/python](https://hub.docker.com/_/python/)
 [cuihairu/python](https://hub.docker.com/r/cuihairu/ubuntu/)
 
-### tags
+### Tags
 - cuihairu/python:latest , cuihairu/python:3.7-centos7 
 [Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/python/3.7/centos7/Dockerfile)
 
-### update
+### Update
+- 2019-3-8  更新python版本为python3.7.2
 - 2018-8-31 基于centos7系统安装python3.7.0
+  
 ---
-### lua
+## lua
 [cuihairu/lua](https://hub.docker.com/r/cuihairu/lua/)
 
 ### tags
