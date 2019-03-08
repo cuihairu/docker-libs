@@ -1,6 +1,6 @@
 FROM centos:7
 
-MAINTAINER cuihairu <chuihairu@gmail.com>
+LABEL author="cuihairu <chuihairu@gmail.com>"
 
 ADD http://mirrors.aliyun.com/repo/Centos-7.repo /etc/yum.repos.d/CentOS-Base.repo
 # ADD http://mirrors.163.com/.help/CentOS7-Base-163.repo /etc/yum.repos.d/CentOS-Base.repo

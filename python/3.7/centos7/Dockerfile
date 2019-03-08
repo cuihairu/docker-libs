@@ -1,6 +1,6 @@
 FROM cuihairu/centos:7-gcc
 
-MAINTAINER cuihairu <chuihairu@gmail.com>
+LABEL author="cuihairu <chuihairu@gmail.com>"
 
 # ensure local python is preferred over distribution python
 ENV PATH /usr/local/bin:$PATH
@@ -28,7 +28,7 @@ RUN  yum install -y  \
         libssl-devel
 
 ENV GPG_KEY 0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D
-ENV PYTHON_VERSION 3.7.0
+ENV PYTHON_VERSION 3.7.2
 
 RUN set -ex \
     \

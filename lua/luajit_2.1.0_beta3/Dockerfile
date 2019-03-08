@@ -1,6 +1,6 @@
 FROM cuihairu/centos:7-gcc
 
-MAINTAINER cuihairu <chuihairu@gmail.com>
+LABEL author="cuihairu <chuihairu@gmail.com>"
 
 ENV LUA_VERSION 2.1.0-beta3
 
