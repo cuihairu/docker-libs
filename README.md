@@ -73,7 +73,9 @@ source /opt/rh/devtoolset-version/enable
 
 ## Cling
 
-[cuihairu/cling](https://hub.docker.com/r/cuihairu/cling/)
+[cuihairu/cling](https://hub.docker.com/r/cuihairu/cling/Dockerfile)
+
+
 
 ### Tags
 
@@ -82,6 +84,7 @@ source /opt/rh/devtoolset-version/enable
 >基于centos7
 默认目录:/data
 
+---
 
 ## Python
 
@@ -97,17 +100,17 @@ source /opt/rh/devtoolset-version/enable
 - 2018-8-31 基于centos7系统安装python3.7.0
   
 ---
-## lua
+## Lua
 [cuihairu/lua](https://hub.docker.com/r/cuihairu/lua/)
 
-### tags
+### Tags
 - cuihairu/lua:5.3.5-centos ,cuihairu/lua:latest
 [Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/lua/5.3.5/Dockerfile)
 
 - cuihairu/lua:luajit-2.1.0.beta3 
 [Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/lua/luajit_2.1.0_beta3/Dockerfile)
 
-### update
+### Update
 - 2018-9-4 增加luajit_2.1.0_beta3 lua版本5.1.4
 - 2018-9-4 基于centos7安装lua|修改从本地安装lua不从网络下载不稳定。
 
