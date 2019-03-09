@@ -30,7 +30,7 @@ function configure_build() {
 
 function build_all() {
     cd "${BUILD_DIR}"
-    make3 --jobs=2 install
+    cmake3 --jobs=2 install
 }
 
 function cleanup() {
