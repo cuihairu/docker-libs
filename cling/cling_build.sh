@@ -11,7 +11,7 @@ function initialize() {
     mkdir -p "${WORKSPACE}"
 }
 
-function clone_fast() {  
+function clone_fast() {
     # clone <repo_name> <branch> <dir>
     git clone --depth 1 "http://root.cern.ch/git/${1}.git" --branch "${2}" "${3}" >/dev/null
 }

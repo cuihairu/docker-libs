@@ -13,6 +13,6 @@ RUN yum update -y \
     && echo "nameserver 223.6.6.6" >> /etc/resolv.conf \
     && echo "nameserver 114.114.114.114" >> /etc/resolv.conf
 
-ONBUILD RUN yum makecache 
+ONBUILD RUN yum makecache
 
 

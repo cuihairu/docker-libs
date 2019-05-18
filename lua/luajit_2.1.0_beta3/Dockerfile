@@ -17,6 +17,6 @@ RUN yum install -y \
     && make \
     && make install  \
     && cd /data/ \
-    && rm -rf /data/LuaJIT-${LUA_VERSION} 
+    && rm -rf /data/LuaJIT-${LUA_VERSION}
 
 CMD ["lua","-i"]

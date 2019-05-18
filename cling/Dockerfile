@@ -5,7 +5,7 @@ LABEL author="cuihairu <chuihairu@gmail.com>"
 ENV CLING_DIR="/opt/cling" \
     PATH="$PATH:/opt/cling/bin"
 
-ADD ./cling_build.sh /root/cling_build.sh 
+ADD ./cling_build.sh /root/cling_build.sh
 
 RUN yum install -y \
     cmake3 \
@@ -22,6 +22,6 @@ RUN yum install -y \
     valgrind-dvel \
     which
 
-RUN cd /root && source ./cling_build.sh 
+RUN cd /root && source ./cling_build.sh
 
 ENTRYPOINT "/opt/cling/bin/cling"

@@ -17,6 +17,6 @@ RUN yum install -y \
     && make linux test\
     && make install  \
     && cd /data/ \
-    && rm -rf /data/lua-${LUA_VERSION} 
+    && rm -rf /data/lua-${LUA_VERSION}
 
 CMD ["lua","-i"]

@@ -22,4 +22,4 @@ VOLUME /data
 
 WORKDIR /data
 
-ONBUILD RUN yum makecache 
+ONBUILD RUN yum makecache
