@@ -99,10 +99,12 @@ source /opt/rh/devtoolset-version/enable
 [cuihairu/python](https://hub.docker.com/r/cuihairu/ubuntu/)
 
 ### Tags
+
 - cuihairu/python:latest , cuihairu/python:3.7-centos7
 [Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/python/3.7/centos7/Dockerfile)
 
 ### Update
+
 - 2019-3-8  更新python版本为python3.7.2
 - 2018-8-31 基于centos7系统安装python3.7.0
 
@@ -132,7 +134,7 @@ source /opt/rh/devtoolset-version/enable
 
 ### Tags
 
-- cuihairu/ant-1.9.x:openjdk-1.7
+- cuihairu/ant:1.9.4-openjdk-1.7
 
 [Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/ant/jdk7/Dockerfile)
 
