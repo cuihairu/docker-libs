@@ -138,4 +138,4 @@ source /opt/rh/devtoolset-version/enable
 
 ### Update
 
-- 2019-5-18 增加Ant的OpenJDK1.7版本编译环境
+- 2019-5-18 增加Ant的OpenJDK1.7版本编译环境，基于CentOS7.6
