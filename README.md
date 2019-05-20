@@ -15,13 +15,12 @@
 ### Tags
 
 - cuihairu/centos:latest, cuihairu/centos:7
-
-[Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/centos/7/Dockerfile)
->指向最新版本目前为7,使用了网易源以及epel
+    [Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/centos/7/Dockerfile)
+    >指向最新版本目前为7,使用了网易源以及epel
 
 - cuihairu/centos:7-gcc
+    [Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/centos/7/gcc/Dockerfile)
 
-[Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/centos/7/gcc/Dockerfile)
 >安装了默认版本的GCC套件gcc4.8.5
 提供了Volume:/data
 默认目录/data
@@ -60,13 +59,13 @@ source /opt/rh/devtoolset-version/enable
 ### Tags
 
 - cuihairu/ubuntu:latest,cuihairu/ubuntu:18.04
-[Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/ubuntu/18/Dockerfile)
+    [Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/ubuntu/18/Dockerfile)
 
 >指向了ubuntu:18.04
 默认目录:/data
 
 - cuihairu/ubuntu:18.04-gcc
-[Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/ubuntu/18/Dockerfile)
+    [Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/ubuntu/18/Dockerfile)
 
 >指向了ubuntu:18.04,安装了默认的gcc7.3
 提供了Volume:/data
@@ -86,8 +85,9 @@ source /opt/rh/devtoolset-version/enable
 ### Tags
 
 - cuihairu/cling:latest
-[Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/cling/Dockerfile)
-[root project](https://github.com/root-project)
+    [Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/cling/Dockerfile)
+    [root project](https://github.com/root-project)
+
 >基于centos7
 默认目录:/data
 
@@ -101,7 +101,7 @@ source /opt/rh/devtoolset-version/enable
 ### Tags
 
 - cuihairu/python:latest , cuihairu/python:3.7-centos7
-[Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/python/3.7/centos7/Dockerfile)
+    [Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/python/3.7/centos7/Dockerfile)
 
 ### Update
 
@@ -115,16 +115,33 @@ source /opt/rh/devtoolset-version/enable
 ### Tags
 
 - cuihairu/lua:5.3.5-centos ,cuihairu/lua:latest
-
-[Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/lua/5.3.5/Dockerfile)
+    [Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/lua/5.3.5/Dockerfile)
 
 - cuihairu/lua:luajit-2.1.0.beta3
-[Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/lua/luajit_2.1.0_beta3/Dockerfile)
+    [Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/lua/luajit_2.1.0_beta3/Dockerfile)
 
 ### Update
 
 - 2018-9-4 增加luajit_2.1.0_beta3 lua版本5.1.4
 - 2018-9-4 基于centos7安装lua|修改从本地安装lua不从网络下载不稳定。
+
+---
+
+## Java
+
+[cuihairu/java](https://hub.docker.com/r/cuihairu/java/)
+
+### Tags
+
+- cuihairu/java:openjdk-1.7
+    [Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/java/jdk7/Dockerfile)
+- cuihairu/java:openjdk-1.8
+    [Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/java/jdk8/Dockerfile)
+
+### Update
+
+- 2019-5-20 增加OpenJDK1.8版本编译环境，基于CentOS7.x
+- 2019-5-20 增加OpenJDK1.7版本编译环境，基于CentOS7.x
 
 ---
 
@@ -135,9 +152,9 @@ source /opt/rh/devtoolset-version/enable
 ### Tags
 
 - cuihairu/ant:1.9.4-openjdk-1.7
+    [Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/ant/jdk7/Dockerfile)
 - cuihairu/ant:1.9.x-openjdk-1.8
-
-[Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/ant/jdk7/Dockerfile)
+    [Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/ant/jdk8/Dockerfile)
 
 ### Update
 
