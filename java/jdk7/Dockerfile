@@ -5,7 +5,7 @@ LABEL author="cuihairu <chuihairu@gmail.com>"
 ADD http://mirrors.aliyun.com/repo/Centos-7.repo /etc/yum.repos.d/CentOS-Base.repo
 
 RUN yum update -y \
-    && yum install -y java-1.7.0-openjdk unzip zip
+    && yum install -y java-1.7.0-openjdk-* unzip zip
 
 ADD https://www-eu.apache.org/dist//ant/binaries/apache-ant-1.9.14-bin.zip /usr/local/
 
