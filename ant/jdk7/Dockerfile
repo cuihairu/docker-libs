@@ -11,7 +11,9 @@ ADD https://www-eu.apache.org/dist//ant/binaries/apache-ant-1.9.14-bin.zip /usr/
 
 RUN unzip /usr/local/apache-ant-1.9.14-bin.zip -d /usr/local \
     && rm -f /usr/local/apache-ant-1.9.14-bin.zip \
-    && mv /usr/local/apache-ant-1.9.14 /usr/local/ant
+    && mv /usr/local/apache-ant-1.9.14 /usr/local/ant \
+    && yum clean all \
+    && rm -rf /var/cache/yum/*
 
 ENV JAVA_HOME /etc/alternatives/java_sdk_1.7.0
 ENV ANT_HOME /usr/local/ant
