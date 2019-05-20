@@ -135,9 +135,11 @@ source /opt/rh/devtoolset-version/enable
 ### Tags
 
 - cuihairu/ant:1.9.4-openjdk-1.7
+- cuihairu/ant:1.9.x-openjdk-1.8
 
 [Dockerfile](https://github.com/cuihairu/docker-libs/blob/master/ant/jdk7/Dockerfile)
 
 ### Update
 
-- 2019-5-18 增加Ant的OpenJDK1.7版本编译环境，基于CentOS7.6
+- 2019-5-20 增加Ant的OpenJDK1.8版本编译环境，基于CentOS7.x
+- 2019-5-18 增加Ant的OpenJDK1.7版本编译环境，基于CentOS7.x
